@@ -1,32 +1,20 @@
 const levelmenu = (prefix, pushname) => {
-    return `
-
-*Comandos De Level 🆕 beta*
+    return `*┍━━━━╝✹NIVEL✹╚━━━━┑*
  
-══════════════
+┏━━━━━━━━━━━━━━━━━━━━ 
+┃EL BOT NECESITA SER ADMIN.
+┣━━━━━━━━━━━━━━━━━━━━
+┣*PARA ACTIVAR NIVEL*
+┣☛ *leveling 1
+┣━━━━━━━━━━━━━━━━━━━━ 
+┣*PARA DESACTIVAR NIVEL*
+┣☛ *leveling 0
+┣━━━━━━━━━━━━━━━━━━━━ 
+┣PARA VER TU NIVEL EN TIEMPO REAL
+┣☛ *level
+╰━━━━━━━━━━━━━━━━━━━━
 
-PARA ACTIVARLO EL BOT NECESITA DE ADMINISTRACIÓN
-
-*PARA ACTIVAR LEVEL*
-
-*leveling 1
-
-
-*PARA DESACTIVAR LEVEL*
-
-*leveling 0
-
-══════════════
-
-PARA VER TU XP EN TIEMPO REAL
-
-*level
-
-══════════════
-    
-*Recuerda que si actualizas tu bot o borras el numero del bot o otra cosa todos los levels de los particiantes quedaran en 0*
-    
-ву ѕнαη∂υу
+*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*
 `
 
 }
