@@ -247,7 +247,7 @@ async function starts() {
 		start('2', 'Desconectado')
 	})
 	client.on('open', () => {
-		success('2', 'Conectado by shanduy')
+		success('2', 'Conectado BY:Jiren Y Wendy-Chan')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./Nazwa.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -259,11 +259,11 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `HOLAA!! @${num.split('@')[0]} ¿COMO ESTAS?😃\n\n『Bienvenido A *${mdata.subject}*』\n\nUn gusto conocerte amig@ 🤗\n\n_Recuerda leer las reglas del grupo para no tener ningun problema 🧐_\n\n*Solo disfrutar de este grupo y divertite 🥳*`
+				teks = `HOLAAA✨🥳!! @${num.split('@')[0]} ¿TODO BIEN?🤔👀\n\n『BIENVENID@ A *${mdata.subject}*』\n\nUn gusto conocerte Y tenerte por aca amig@ 🌚\n\n_Recuerda leer las reglas que se encuentra en la descripción del grupo, de esa manera usted sabrá lo que se puede hacer, enviar, y se evitara muchos inconvenientes🧐_\n\n*Bueno disfruta del grupo y diviertete, Y espero que el grupo sea de su agrado🌚😅*`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `Bueno, se fue @${num.split('@')[0]} 👋\n\nQue dios lo bendiga 😎`
+				teks = `Bueno, salio o lo eliminaron a @${num.split('@')[0]} 👋\n\nYa sea que salió lo eliminaron o lo haya eliminado yo🤔 no puedo saber la situación ya que soy un bot.. como sea, Adiós v: nose quien vrgs era pero adiós XD😂`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
@@ -302,37 +302,37 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: 'Calmao pa estoy procesando😎\n\n❗Por favor no hacer spam👏❗\n\nву ѕнαη∂υу',
-				success: '✔️ Listo ✔️',
-                                levelon: '❬ ✅ ❭ *Level activado*',
-				leveloff: ' ❬ ✅ ❭  *Level desactivado*',
-				foto: 'Calmao estoy cambiando la foto del grupo\n\nPor favor no hacer spam👏\n\nву ѕнαη∂υу',
-				unir: 'Espere por favor 🕖\n\nEstoy tratando de unirlo\n\n*Recuerda, si no lo uno es por que el usuario tiene bloqueado la funcion para unirlo a grupos*\n\nву ѕнαη∂υу',
-                                levelnoton: '❬ ❎ ❭ *Level no esta activado*',
+				wait: 'Espere un momento estoy procesando👀📱\n\n🧐NO HAGAS SPAM LA CTMR🧐\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+				success: '✔️ LISTO ✔️',
+                                levelon: '❬ ✅ ❭ *Nivel activado*',
+				leveloff: ' ❬ ✅ ❭  *Nivel desactivado*',
+				foto: 'Espere un momento estoy cambiando la foto del grupo\n\n🧐NO HAGAS SPAM LA CTMR🧐\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+				unir: 'Espere un momento 👀\n\nEstoy tratando de unirlo\n\n*Recuerda, si no lo uno es por que el usuario tiene bloqueado la funcion para unirlo a grupos*\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+                                levelnoton: '❬ ❎ ❭ *Nivel no esta activado*',
 				levelnol: '*Nivel* 0 ',
 				error: {
-					stick: '[❎] Falló, se produjo un error al convertir la imagen en una pegatina',
+					stick: '[❎] ERROR××, se produjo un error al convertir la imagen en una pegatina',
 					yt: 'Falló en el link o se produjo un error al momento de descargar el video',
-					unire: 'Por favor, no coloques (+) solo pon el numero con el codigo de area de su pais\n\nEjemplo: *unir 52xxxxxxxxx',
-					Iv: 'Este no es un link de youtube'
+					unire: 'Por favor, no coloques (+) solo pon el numero con el codigo de area de su pais\n\nEjemplo: *unir 7xxxxxxxxxx',
+					Iv: 'Oe Gil o Gila, Este no es un link de youtube'
 					},
 				only: {
 					group: '[❗] Este comando es solo para grupos',
-					ownerG: '[❗] Este comando solo puede ser utilizado por un admins del grupo',
-					ownerB: '[❗] Este comando solo lo usa ShanBot',
+					ownerG: '[❗] Este comando solo puede ser utilizado por admins del grupo',
+					ownerB: '[❗] Este comando solo lo usa el dueño del bot',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador',
-                                        pegatina: 'Calma crack estoy haciendo tu sticker 👏\n\n*Recuerda los stickersgif son de 6 segundos*\n\nву ѕнαη∂υу',
-					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Esto puede demorar unos minutos*\n\nву ѕнαη∂υу',
-					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\nby shanduy',
-					mpcancion: 'Calmaoooo estoy procesando 😎\n\n*Convirtiendo de MP4 a MP3 🔄*\n\nву ѕнαη∂υу',
-					mpa: 'Euu flaco 🥴\n\n*Estoy descargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\nву ѕнαη∂υу',
-                                        xn: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nву ѕнαη∂υу',
-					mpv: 'Calma ✋🥸🤚\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nву ѕнαη∂υу',
-					insta: 'Calmao 😎\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\nву ѕнαη∂υу',
-					musica: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\nSi no envio tu musica checa que version tienes del bot con *version\n\nву ѕнαη∂υу',
-					musica2: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\nSi no envio tu musica checa que version tienes del bot con *version\n\nву ѕнαη∂υу',
-					daftarB: `「NO ESTAS REGISTRADO」\n\nPA NO APARECES EN MI BASE DE DATOS ✋🥸🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar shanduy`,
+                                        pegatina: 'Espere un momento estoy haciendo tu sticker 👀\n\n*Recuerda los stickersgif son de 6 segundos* Y 🧐NO HAGAS SPAM LA CTMR🧐\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+					attp: 'Espere un momento estoy convirtiendo tu texto a sticker 👀\n\n*Esto puede demorar unos minutos*\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+					imgs: 'Ey Señor(a)🌚\n\n*Estoy Convirtiendo tu Sticker a Imagen 🔄* así que, 🧐NO HAGAS SPAM LA CTMR🧐\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+					mpcancion: 'Estoy procesando 👀\n\n*Convirtiendo de MP4 a MP3 🔄*, 🧐NO HAGAS SPAM LA CTMR🧐\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+					mpa: 'Aguarda 👀\n\n*Estoy descargando tu cancion 🔄*\n\nEspera un momento, por favor Y 🧐NO HAGAS SPAM LA CTMR🧐\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+                                        xn: 'Calma 👀\n\n*Estoy descargando tu video 🔄*\n\nEspera un momento, por favor Y 🧐NO HAGAS SPAM LA CTMR🧐\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+					mpv: 'Espera 👀\n\n*Estoy descargando tu video 🔄*\n\nEspera un momento, por favor Y 🧐NO HAGAS SPAM LA CTMR🧐\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+					insta: 'Calma\n\n*Estoy descargando tu post 🔄*\n\nEspera un momento, por favor Y 🧐NO HAGAS SPAM LA CTMR🧐\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+					musica: 'Hey guap@ estoy buscando tu canción así que espera 7w7🌚\n\n*Recuerda colocar bien el nombre de la cancion o el link de Yt*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\nSi no envio tu musica es porque no hay internet o estoy descuartizado.\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+					musica2: 'Hey guap@ estoy buscando tu canción así que espera 7w7🌚\n\n*Recuerda colocar bien el nombre de la cancion o el link de Yt*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\nSi no envio tu musica es porque no hay internet o estoy descuartizado.\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
+					daftarB: `「MOMENTO🤔 ESTAS REGISTRADO✍️」\n\nSEÑOR(A) NO APARECES EN MI BASE DE DATOS💻📱\n\nRegistrate para poder acceder a mis funciones\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar J&W`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -388,7 +388,7 @@ async function starts() {
 if (budy.includes("https://wa.me/")){
 		if (!isGroup) return
 		if (!isAntiWa) return
-                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
+                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces , usted tiene permitido enviar lo que le plazca 7w7🌚')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		reply(`*LINK DE WHATSAPP DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
@@ -404,7 +404,7 @@ if (budy.includes("https://wa.me/")){
 	if (budy.includes("wa.me")){
 		if (!isGroup) return
 		if (!isAntiWa) return
-                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
+                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces, usted tiene permitido enviar lo que le plazca 7w7🌚')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		reply(`*LINK DE WHATSAPP DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
@@ -426,7 +426,7 @@ if (budy.includes("https://wa.me/")){
 if (budy.includes("https://www.facebook.com/")){
 		if (!isGroup) return
 		if (!isAntiFace) return
-                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
+                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces, usted tiene permitido enviar lo que le plazca 7w7🌚')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		reply(`*LINK DE FACEBOOK DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
@@ -442,7 +442,7 @@ if (budy.includes("https://www.facebook.com/")){
 if (budy.includes("https://m.facebook.com/")){
 		if (!isGroup) return
 		if (!isAntiFace) return
-                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
+                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces, usted tiene permitido enviar lo que le plazca 7w7🌚')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		reply(`*LINK DE FACEBOOK DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
@@ -463,7 +463,7 @@ if (budy.includes("https://m.facebook.com/")){
 	if (budy.includes("https://discord.com/")){
 		if (!isGroup) return
 		if (!isAntiDiscord) return
-                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
+                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces, usted tiene permitido enviar lo que le plazca 7w7🌚')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		reply(`*LINK DE DISCORD DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
@@ -479,7 +479,7 @@ if (budy.includes("https://m.facebook.com/")){
 	if (budy.includes("https://s.kwai.app/")){
 		if (!isGroup) return
 		if (!isAntiKwai) return
-                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
+                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces, usted tiene permitido enviar lo que le plazca 7w7🌚')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		reply(`*LINK DE KWAI DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
@@ -495,7 +495,7 @@ if (budy.includes("https://m.facebook.com/")){
 	if (budy.includes("https://www.instagram.com/")){
 		if (!isGroup) return
 		if (!isAntInsta) return
-	        if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
+	        if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces, usted tiene permitido enviar lo que le plazca 7w7🌚')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		reply(`*LINK DE INSTAGRAM DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
@@ -511,7 +511,7 @@ if (budy.includes("https://m.facebook.com/")){
 	if (budy.includes("https://vm.tiktok.com/")){
 		if (!isGroup) return
 		if (!isAntiTik) return
-                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
+                if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces, usted tiene permitido enviar lo que le plazca 7w7🌚')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		reply(`*LINK DE TIK TOK DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
@@ -527,7 +527,7 @@ if (budy.includes("https://m.facebook.com/")){
        if (budy.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
 		if (!isAntiLink) return
-		if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
+		if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces, usted tiene permitido enviar lo que le plazca 7w7🌚')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		reply(`*LINK DE WHATSAPP DETECTADO 📢* ${sender.split("@")[0]} Usted será expulsado del grupo`)
@@ -556,7 +556,7 @@ if (budy.includes("https://m.facebook.com/")){
                 addLevelingXp(sender, amountXp)
                 if (requiredXp <= getLevelingXp(sender)) {
                     addLevelingLevel(sender, 1)
-                    await reply(`*「 FELICIDADES LEVEL UP 🆙🥳 」*\n\nFelicidades subiste de nivel sigue asi 👏\n\n*NOMBRE*\n${pushname}\n*XP*: ${getLevelingXp(sender)}\n*NIVEL*: ${getLevel} ⟿ ${getLevelingLevel(sender)}\n\n_*Para ver tu XP en tiempo real coloca el comando ${prefix}level*_`)
+                    await reply(`*「 🥳✨FELICIDADES SUBISTE DE NIVEL✨🥳 」*\n\nFelicidades sigue asi 👏\n\n*NOMBRE*\n${pushname}\n*XP*: ${getLevelingXp(sender)}\n*NIVEL*: ${getLevel} ⟿ ${getLevelingLevel(sender)}\n\n_*Para ver tu nivel en tiempo real coloca el comando ${prefix}level*_`)
                 }
             } catch (err) {
                 console.error(err)
@@ -688,7 +688,7 @@ pru += `@${_.split('@')[0]}\n`
 }
 ban.push(`${mentioned}`)
 fs.writeFileSync('./database/banned.json', JSON.stringify(ban))
-susp = `『 BANEADO 🚫 』\n\n◉Nombre: @${mentioned[0].split('@')[0]}\n◉Razon: Spam\n\n*Usted a sido baneado del uso del bot, no podra usar el bot hasta nuevo aviso*`
+susp = `『 BANEADO 🚫 』\n\n◉NOMBRE: @${mentioned[0].split('@')[0]}\n◉Razon: SPAM\n\n*Usted a sido baneado del uso del bot, no podra usar el bot hasta nuevo aviso*`
 mentions(`${susp}`, mentioned, true)   
 break
 
@@ -704,7 +704,7 @@ pru += `@${_.split('@')[0]}\n`
 }
 ban.splice(`${mentioned}`)
 fs.writeFileSync('./database/banned.json', JSON.stringify(ban))
-susp = `『 DESBANEADO ✅ 』\n\n◉Nombre: @${mentioned[0].split('@')[0]}\n\n*Se te a retirado el BAN ya puedes usar el bot*`
+susp = `『 DESBANEADO ✅ 』\n\n◉NOMBRE: @${mentioned[0].split('@')[0]}\n\n*Se te a retirado el BAN ya puedes usar el bot*`
 mentions(`${susp}`, mentioned, true)   
 break		
 			
@@ -760,7 +760,7 @@ break
 				  case 'wame':
   client.updatePresence(from, Presence.composing) 
       options = {
-          text: `「 *LINK WHATSAPP* 」\n\n_Solicitado por_ : @${sender.split("@s.whatsapp.net")[0]}\n\nSu link de Whatsapp : *https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*O ( / )*\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
+          text: `「 *LINK WHATSAPP* 」\n\n_PEDIDO DE_ : @${sender.split("@s.whatsapp.net")[0]}\n\nSU LINK DE WHATSAPP : *https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*O ( / )*\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
           contextInfo: { mentionedJid: [sender] }
     }
     client.sendMessage(from, options, text, { quoted: mek } )
@@ -772,7 +772,7 @@ break
 	
 	case 'creador':
 	       client.sendMessage(from, {displayname: "Shan 🥸", vcard: vcard}, MessageType.contact, { quoted: mek})
-		client.sendMessage(from, 'Hola 👋 te saluda Shan, este es un mensaje predeterminado al igual que el audio.\n\nArriba esta mi contacto por si tienen algun problema con las descargas o yo que se.\nYo no soy dueño de este bot ni tampoco lo controlo, yo solo cree la base de datos y le doy mantenimiento.\nEl numero osea mi contacto de arriba no es un bot, si te dio pereza escuchar el audio gordito trolo.\nBueno disfruten del bot y si quieres me puedes seguir en instagram.\n\n*Mi instagram:* https://www.instagram.com/thepavos\n\n*Como instalar el bot:* https://www.youtube.com/watch?v=2LQSzEbpJ-M\n\nву ѕнαη∂υу',MessageType.text, { quoted: mek} )
+		client.sendMessage(from, 'Hola 👋 saludos, este es un mensaje predeterminado al igual que el audio.\n\nArriba esta mi contacto por si tienen algun problema con las descargas o yo que se.\nYo no soy dueño de este bot ni tampoco lo controlo, yo solo cree la base de datos y le doy mantenimiento.\nEl numero osea mi contacto de arriba no es un bot, si te dio pereza escuchar el audio gordito trolo.\nBueno disfruten del bot y no olviden que:\n\n*ELLA NO TE AMA\n\n*Grupo Ofc: https://bit.ly/3yt247X\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',MessageType.text, { quoted: mek} )
                 const none = fs.readFileSync('./mp3/shan.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                 break
@@ -823,7 +823,7 @@ break
 					client.updatePresence(from, Presence.composing) 
                                         if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
-					teks = `*Lista De Administradores Del Grupo*\n\n${groupMetadata.subject}\n\nTotal: ${groupAdmins.length}\n\n`
+					teks = `*LISTA DE ADMINISTRADORES DEL GRUPO*\n\n${groupMetadata.subject}\n\nTOTAL: ${groupAdmins.length}\n\n`
 					no = 0
 					for (let admon of groupAdmins) {
 						no += 1
@@ -851,7 +851,7 @@ break
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 MENCIONANDO 〙✪══\n╠➥'+teks+'╚═〘 by shanduy 〙', members_id, true)
+					mentions('╔══✪〘 HOLA FANTASMAS👻 〙✪══\n╠➥'+teks+'╚═〘 *BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩* 〙', members_id, true)
 					break
                                 case 'send':
 					var pc = body.slice(6)
@@ -1074,7 +1074,7 @@ client.groupLeave (from)
 }, 2000)
 setTimeout( () => {
 client.updatePresence(from, Presence.composing) 
-client.sendMessage(from, 'NO VEMO GILE ✋🥸🤚', text) // ur cods
+client.sendMessage(from, 'NO VEMO GILES', text) // ur cods
 }, 0)
 break
        
@@ -1093,10 +1093,10 @@ client.updatePresence(from, Presence.composing)
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a funar')
+if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a mandar a la mierda XD')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length > 1) {
-teks = 'Pedido recibido, chao nefastooo 👋 :\n'
+teks = 'Pedido recibido, Adiós fuck btch😂 :\n'
 for (let _ of mentioned) {
 teks += `@${_.split('@')[0]}\n`
 const none = fs.readFileSync('./mp3/baneado.mp3');
@@ -1160,7 +1160,7 @@ if (!isGroup) return reply(mess.only.group)
 if (!isUser) return reply(mess.only.daftarB)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 linkgc = await client.groupInviteCode (from)
-yeh = `Aqui esta el link del grupo\n\nhttps://chat.whatsapp.com/${linkgc}\n\nLink Del Grupo *${groupName}*`
+yeh = `👀E AQUI EL ENLACE DEL GRUPO👀\n\nhttps://chat.whatsapp.com/${linkgc}\n\nLINK DEL GRUPO: *${groupName}*`
 client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
 break
 
@@ -1195,7 +1195,7 @@ case 'unir':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-if (args.length < 1) return reply('Para emocion ✋\nPara unir a una persona debes escribir el numero sin (+)\n\nEjemplo: *unir 52xxxxxxxxx')
+if (args.length < 1) return reply('Espera, Espera👀\nPara unir a una persona debes escribir el numero sin (+)\n\nEjemplo: *unir 7xxxxxxxxxx')
 if (args[0].startsWith('+')) return reply(mess.error.unire)
 try {0
 num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
@@ -1221,7 +1221,7 @@ case 'ngc':
       if (!isGroupAdmins) return reply(mess.only.admin)
       if (!isBotGroupAdmins) return reply(mess.only.Badmin)
       client.groupUpdateSubject(from, `${body.slice(5)}`)
-      client.sendMessage(from, '*⌊✅⌉ El nombre del grupo fue cambiado*', text, {quoted: mek})
+      client.sendMessage(from, '*⌊✅⌉ SE CAMBIO EL NOMBRE DEL GRUPO*', text, {quoted: mek})
       break
 
 case 'dgc':
@@ -1229,7 +1229,7 @@ case 'dgc':
       if (!isGroupAdmins) return reply(mess.only.admin)
       if (!isBotGroupAdmins) return reply(mess.only.Badmin)
       client.groupUpdateDescription(from, `${body.slice(5)}`)
-      client.sendMessage(from, '*⌊✅⌉ La descripción del grupo fue cambiado*', text, {quoted: mek})
+      client.sendMessage(from, '*⌊✅⌉ LA DESCRIPCIÓN DEL GRUPO FUE CAMBIADA*', text, {quoted: mek})
       break
 
 case 'welcome':
@@ -1246,7 +1246,7 @@ reply('❬ ✅ ❭ La funcion de bienvenida esta habilitada en este grupo')
 } else if (Number(args[0]) === 0) {
 welkom.splice(from)
 fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-reply('❬ ✅ ❭ La funcion de bienvenida esta deshabilitada en este grupo')
+reply('❬ ✅ ❭ La funcion de bienvenida esta deshabilitada en este grupo, daré la bienvenida a cada nuevo fantama que se una 7w7')
 } else {
 reply('Escribe el comando 1 para activarlo y 0 para desactivarlo Ejemplo: *welcome 1')
 }
@@ -1338,7 +1338,7 @@ break
 					
 					case 'attp':
 						if (!isUser) return reply(mess.only.daftarB)
-					        if (args.length < 1) return reply(`¿Dónde está el texto?\n*Ejemplo:* ${prefix}attp shanduy`)
+					        if (args.length < 1) return reply(`¿Dónde está el texto?\n*Ejemplo:* ${prefix}attp J&W`)
 						reply(mess.only.attp)
 					        attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
 						client.sendMessage(from, attp2, MessageType.sticker, {quoted: mek})
@@ -1359,9 +1359,9 @@ break
 					ran = getRandom('.png')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('❌ No se pudo convertir el sticker en imágenes')
+						if (err) return reply('❌ No se pudo convertir el sticker en imágen')
 						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\nву ѕнαη∂υу'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ IMAGEN CONVERTIDA ✅ ⌉*\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*'})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1384,7 +1384,7 @@ break
 //CREACION DE STICKERS Y VARIOS	            
 		
 	//SERVICIO DE MUSICA Y VIDEO 			
-				
+			
 				
 	        case 'play':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?\n\nEjemplo: *play Industry Baby - Lil Nas X')
@@ -1393,7 +1393,7 @@ break
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.me/api/ytmp3?q=${play}&apikey=hamilton50`)
                 if (anu.error) return reply(anu.error)
-                infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
+                infomp3 = `*⌈ CANCIÓN ENCONTRADA ✅ ⌉*\n◉ *Título:* ${anu.result.title}\n◉ *FUENTE:* ${anu.result.source}\n◉ *TAMAÑO:* ${anu.result.size}\n\n*ESPERE ESTOY ENVIANDO SU ARCHIVO MP3 ⚠*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1407,7 +1407,7 @@ break
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.me/api/ytmp3?q=${play}&apikey=shanduy50`)
                 if (anu.error) return reply(anu.error)
-                infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
+                infomp3 = `*⌈ CANCIÓN ENCONTRADA ✅ ⌉*\n◉ *TÍTULO:* ${anu.result.title}\n◉ *FUENTE:* ${anu.result.source}\n◉ *TAMAÑO:* ${anu.result.size}\n\n*ESPERE ESTOY ENVIANDO SU ARCHIVO MP3 ⚠*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1421,7 +1421,7 @@ break
 		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 		anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
 		if (anu.error) return reply(anu.error.yt)
-		teks = `*⌈ Video Encontrada ✅ ⌉*\n◉ *Título:* ${anu.result.title} \n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*`
+		teks = `*⌈ VIDEO ENCONTRADA ✅ ⌉*\n◉ *TÍTULO:* ${anu.result.title} \n◉ *TAMAÑO:* ${anu.result.size}\n\n*ESPERE ESTOY ENVIANDO SU ARCHIVO MP4 ⚠*`
 		lagu = await getBuffer(anu.result.thumbnail)
                 client.sendMessage(from, lagu, image, {quoted: mek, caption: teks})
 		buffer = await getBuffer(anu.result.url_video)
@@ -1435,7 +1435,7 @@ break
 		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 		anu = await fetchJson(`https://api.zeks.me/api/ytmp3?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
 		if (anu.error) return reply(anu.error.yt)
-		teks = `*⌈ Cancion Encontrada ✅ ⌉*\n◉ *Título:* ${anu.result.title} \n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
+		teks = `*⌈ CANCIÓN ENCONTRADA ✅ ⌉*\n◉ *TÍTULO:* ${anu.result.title} \n◉ *TAMAÑO:* ${anu.result.size}\n\n*ESPERE ESTOY ENVIANDO SU ARCHIVO MP3 ⚠*`
 		lagu = await getBuffer(anu.result.thumbnail)
                 client.sendMessage(from, lagu, image, {quoted: mek, caption: teks})
 		buffer = await getBuffer(anu.result.url_audio)
@@ -1450,13 +1450,13 @@ break
 
 case 'daftar':
 client.updatePresence(from, Presence.composing)
-if (isUser) return reply('Ya estas registrado 🧐')
-if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar shanduy`)
+if (isUser) return reply('Ya estas registrado 🧐, ya se olvidó?🤔')
+if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar J&W`)
 var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
 fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`DNI: MALASO 🥸\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários: ${user.length}\`\`\``, text, {quoted: mek})
+client.sendMessage(from, `\`\`\`SU REGISTRO FUE UN EXITO\`\`\`\n\n\`\`\`INFO: ELLA NO TE AMA🌚\`\`\`\n\n\`\`\`HORA EC: ${time}\`\`\`\n\n\`\`\`FECHA: ${date}\`\`\`\n\n\`\`\`[USUARIO]: ${nombre}\`\`\`\n\`\`\`[NÚMERO]: wa.me/${sender.split("@")[0]}\`\`\`\n\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`registrate ${prefix}help\`\`\`\n\`\`\`\nTOTAL DE USUARIOS: ${user.length}\`\`\``, text, {quoted: mek})
 break
                                 
 //FIN DE REGISTRO  
@@ -1724,23 +1724,23 @@ break
                 default:
                 
 		if (budy.includes(`Todo bien`)) {
-                  reply(`Si amigo todo bien, vite`)
+                  reply(`Si amigo todo bien🤔`)
                   }
 
 		if (budy.includes(`Buenos dias`)) {
-                  reply(`Buenos Dias trolos de mierda`)
+                  reply(`Buenos Dias guap@s🌚`)
                   }
 
 		if (budy.includes(`Bot gay`)) {
-                  reply(`Miren a este boludito`)
+                  reply(`Miren a este csmr😂`)
                   }
 
 		if (budy.includes(`Gracias`)) {
-                  reply(`De nada padre`)
+                  reply(`De nada guap@🌚`)
                   }
 
 		if (budy.includes(`Bien gracias y tu?`)) {
-                  reply(`Opa yazmin te extrañe :(`)
+                  reply(`te extrañe :(, okno`)
                   }
 					
 		if (budy.includes(`Opa`)) {
