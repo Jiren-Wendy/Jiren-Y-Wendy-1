@@ -7,6 +7,7 @@ const help = (prefix) => {
 ▂▄▅█████████▅▄▃▂…
 [███████████████████]
 *╚╩══✠INFORMACIÓN✠══╩╝*
+_ALGUNOS COMANDOS NO FUNCIONAN YA QUE EL BOT ESTA EN MANTENIMIENTO*
 
 *○COMANDO:* ⌜ * ⌟
 *○GRUPO OFC:* ☪⃟⚜⃝𝔸ℕ𝕀𝕄𝔼&𝕄𝔸𝕊⃝➳⃟♾
