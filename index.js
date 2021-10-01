@@ -259,11 +259,11 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `HOLAAA✨🥳!! @${num.split('@')[0]} ¿TODO BIEN?🤔👀\n\n『BIENVENID@ A *${mdata.subject}*』\n\nUn gusto conocerte Y tenerte por aca amig@ 🌚\n\n_Recuerda leer las reglas que se encuentra en la descripción del grupo, de esa manera usted sabrá lo que se puede hacer, enviar, y se evitara muchos inconvenientes🧐_\n\n*Bueno disfruta del grupo y diviertete, Y espero que el grupo sea de su agrado🌚😅*`
+				teks = `HOLAAA✨🥳!! @${num.split('@')[0]} ¿TODO BIEN?🤔👀\n\n『BIENVENID@ A *${mdata.subject}*』\n\nUn gusto conocerte Y tenerte por aca amig@ 🌚\n\n_Recuerda leer las reglas que se encuentra en la descripción del grupo, de esa manera usted sabrá lo que se puede hacer, enviar y se evitara muchos inconvenientes🧐_\n\n*Bueno disfrute del grupo y diviertete, Y espero que el grupo sea de su agrado🌚😅*`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `Bueno, salio o lo eliminaron a @${num.split('@')[0]} 👋\n\nYa sea que salió lo eliminaron o lo haya eliminado yo🤔 no puedo saber la situación ya que soy un bot.. como sea, Adiós v: nose quien vrgs era pero adiós XD😂`
+				teks = `Bueno, salio o lo eliminaron a @${num.split('@')[0]} 👋\n\nYa sea que salió lo eliminaron, o quizá lo haya elimine yo🤔 no puedo saber la situación ya que soy un bot.. como sea, Adiós v: nose quien vrgs era pero adiós XD😂`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
@@ -332,7 +332,7 @@ async function starts() {
 					insta: 'Calma\n\n*Estoy descargando tu post 🔄*\n\nEspera un momento, por favor Y 🧐NO HAGAS SPAM LA CTMR🧐\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
 					musica: 'Hey guap@ estoy buscando tu canción así que espera 7w7🌚\n\n*Recuerda colocar bien el nombre de la cancion o el link de Yt*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\nSi no envio tu musica es porque no hay internet o estoy descuartizado.\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
 					musica2: 'Hey guap@ estoy buscando tu canción así que espera 7w7🌚\n\n*Recuerda colocar bien el nombre de la cancion o el link de Yt*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\nSi no envio tu musica es porque no hay internet o estoy descuartizado.\n\n*BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩*',
-					daftarB: `「MOMENTO🤔 ESTAS REGISTRADO✍️」\n\nSEÑOR(A) NO APARECES EN MI BASE DE DATOS💻📱\n\nRegistrate para poder acceder a mis funciones\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar J&W`,
+					daftarB: `「MOMENTO🤔 NO ESTAS REGISTRADO✍️」\n\nSEÑOR(A) NO APARECES EN MI BASE DE DATOS💻📱\n\nRegistrate para poder acceder a mis funciones\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar J&W`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -585,7 +585,7 @@ if (budy.includes("https://m.facebook.com/")){
 				if (!packname) packname = 'ShanBot'; if (!author) author = 'Shanduy';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
-				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
+				if yo return `./src/stickers/${name}.exif`
 				const json = {	
 					"sticker-pack-name": packname,
 					"sticker-pack-publisher": author,
