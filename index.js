@@ -585,7 +585,7 @@ if (budy.includes("https://m.facebook.com/")){
 				if (!packname) packname = 'ShanBot'; if (!author) author = 'Shanduy';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
-				if return `./src/stickers/${name}.exif`
+				if (fs.existsSync(`./src/stickers/${name}.exif`))return `./src/stickers/${name}.exif`
 				const json = {	
 					"sticker-pack-name": packname,
 					"sticker-pack-publisher": author,
