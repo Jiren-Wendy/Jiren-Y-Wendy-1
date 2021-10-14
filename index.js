@@ -259,11 +259,11 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `HOLAAA✨🥳!! @${num.split('@')[0]} ¿TODO BIEN?🤔👀\n\n『BIENVENID@ A *${mdata.subject}*』\n\nUn gusto conocerte Y tenerte por aca amig@ 🌚\n\n_Recuerda leer las reglas que se encuentra en la descripción del grupo, de esa manera usted sabrá lo que se puede hacer, enviar y se evitara muchos inconvenientes🧐_\n\n*Bueno disfrute del grupo y diviertete, Y espero que el grupo sea de su agrado🌚😅*`
+				teks = `HOLAAA✨🥳!! @${num.split('@')[0]} ¿TODO BIEN?🤔👀\n\n『BIENVENID@ A *${mdata.subject}*』\n\nUn gusto conocerte Y tenerte por aca amig@ 🌚\n\n_Recuerda leer las reglas que se encuentra en la descripción del grupo✍️\n\n*Bueno disfruta del grupo y diviértete, Y espero que el grupo sea de su agrado🌚😅*`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `Bueno, salio o lo eliminaron a @${num.split('@')[0]} 👋\n\nYa sea que salió lo eliminaron, o quizá lo haya elimine yo🤔 no puedo saber la situación ya que soy un bot.. como sea, Adiós v: nose quien vrgs era pero adiós XD😂`
+				teks = `F por @${num.split('@')[0]} 👋\n\nSayonara👋`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
@@ -851,7 +851,7 @@ break
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 HOLA FANTASMAS👻 〙✪══\n╠➥'+teks+'╚═〘 *BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩* 〙', members_id, true)
+					mentions('╔══✪〘 HOLA GUAPOS Y GUAPAS🌚 〙✪══\n╠➥'+teks+'╚═〘 *BY:〲⎠⎠ɪʀᴇɴ〴 ᭄ Y🌹⃢⃟ꦼW҉𝔢𝔫𝔡𝔶-𝔠𝔥𝔞𝔫༒⃢⃟🇲🇽⁩* 〙', members_id, true)
 					break
                                 case 'send':
 					var pc = body.slice(6)
@@ -1094,7 +1094,7 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a mandar a la mierda XD')
-mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+mentioned = mek.message.extendedTextMessage.contextInfo.menti unonedJid
 if (mentioned.length > 1) {
 teks = 'Pedido recibido, Adiós fuck btch😂 :\n'
 for (let _ of mentioned) {
@@ -1246,14 +1246,14 @@ reply('❬ ✅ ❭ La funcion de bienvenida esta habilitada en este grupo')
 } else if (Number(args[0]) === 0) {
 welkom.splice(from)
 fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-reply('❬ ✅ ❭ La funcion de bienvenida esta deshabilitada en este grupo, daré la bienvenida a cada nuevo fantama que se una 7w7')
+reply('❬ ✅ ❭ La funcion de bienvenida esta deshabilitada en este grupo')
 } else {
 reply('Escribe el comando 1 para activarlo y 0 para desactivarlo Ejemplo: *welcome 1')
 }
 break					
 					
 					
-//FIN DE ADMINISTRACION DE GRUPOS				
+//FIN DE ADMINISTRACION DE GRUPOS			
 				
 				
 				
@@ -1456,7 +1456,7 @@ var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
 fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-client.sendMessage(from, `\`\`\`SU REGISTRO FUE UN EXITO\`\`\`\n\n\`\`\`INFO: ELLA NO TE AMA🌚\`\`\`\n\n\`\`\`HORA EC: ${time}\`\`\`\n\n\`\`\`FECHA: ${date}\`\`\`\n\n\`\`\`[USUARIO]: ${nombre}\`\`\`\n\`\`\`[NÚMERO]: wa.me/${sender.split("@")[0]}\`\`\`\n\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`registrate ${prefix}help\`\`\`\n\`\`\`\nTOTAL DE USUARIOS: ${user.length}\`\`\``, text, {quoted: mek})
+client.sendMessage(from, `\`\`\`SU REGISTRO FUE UN EXITO\`\`\`\n\n\`\`\`INFO: ELLA NO TE AMA🌚\`\`\`\n\n\`\`\`HORA EC: ${time}\`\`\`\n\n\`\`\`FECHA: ${date}\`\`\`\n\n\`\`\`[USUARIO]: ${nombre}\`\`\`\n\`\`\`[NÚMERO]: wa.me/${sender.split("@")[0]}\`\`\`\n\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`Digita ${prefix}help\`\`\`\n\`\`\`\nTOTAL DE USUARIOS: ${user.length}\`\`\``, text, {quoted: mek})
 break
                                 
 //FIN DE REGISTRO  
